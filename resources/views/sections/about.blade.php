@@ -12,6 +12,9 @@
         $yearArray = str_split($year);
 
     }
+
+    $current_lang = isset($_SERVER['HTTP_X_GT_LANG']) ? $_SERVER['HTTP_X_GT_LANG'] : '';
+    dd($current_lang);
 @endphp
 
 <section id="about" class="bg-main relative overflow-hidden">    

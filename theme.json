@@ -1141,59 +1141,9 @@
           "slug": "fuchsia-950"
         },
         {
-          "color": "#fdf2f8",
-          "name": "Pink 50",
-          "slug": "pink-50"
-        },
-        {
-          "color": "#fce7f3",
-          "name": "Pink 100",
-          "slug": "pink-100"
-        },
-        {
-          "color": "#fbcfe8",
-          "name": "Pink 200",
-          "slug": "pink-200"
-        },
-        {
-          "color": "#f9a8d4",
-          "name": "Pink 300",
-          "slug": "pink-300"
-        },
-        {
-          "color": "#f472b6",
-          "name": "Pink 400",
-          "slug": "pink-400"
-        },
-        {
-          "color": "#ec4899",
-          "name": "Pink 500",
-          "slug": "pink-500"
-        },
-        {
-          "color": "#db2777",
-          "name": "Pink 600",
-          "slug": "pink-600"
-        },
-        {
-          "color": "#be185d",
-          "name": "Pink 700",
-          "slug": "pink-700"
-        },
-        {
-          "color": "#9d174d",
-          "name": "Pink 800",
-          "slug": "pink-800"
-        },
-        {
-          "color": "#831843",
-          "name": "Pink 900",
-          "slug": "pink-900"
-        },
-        {
-          "color": "#500724",
-          "name": "Pink 950",
-          "slug": "pink-950"
+          "color": "#ee7c72",
+          "name": "Pink",
+          "slug": "pink"
         },
         {
           "color": "#fff1f2",
@@ -1249,6 +1199,11 @@
           "color": "#4c0519",
           "name": "Rose 950",
           "slug": "rose-950"
+        },
+        {
+          "color": "#141858",
+          "name": "Main",
+          "slug": "main"
         }
       ]
     },
@@ -1274,8 +1229,8 @@
       "customFontSize": false,
       "fontFamilies": [
         {
-          "fontFamily": "ui-sans-serif,system-ui,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\"",
-          "name": "Ui-sans-serif",
+          "fontFamily": "Barlow Condensed",
+          "name": "Barlow Condensed",
           "slug": "sans"
         },
         {
@@ -1312,7 +1267,7 @@
         },
         {
           "name": "xl",
-          "size": "1.25rem",
+          "size": "22px",
           "slug": "xl"
         },
         {
