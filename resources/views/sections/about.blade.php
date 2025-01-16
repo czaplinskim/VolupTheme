@@ -15,6 +15,7 @@
 
     $current_lang = isset($_SERVER['HTTP_X_GT_LANG']) ? $_SERVER['HTTP_X_GT_LANG'] : '';
     dd($current_lang);
+
 @endphp
 
 <section id="about" class="bg-main relative overflow-hidden">    
@@ -22,7 +23,6 @@
     <div class="absolute w-full h-full court-line">
         <x-court-line size="full"></x-court-line>
     </div>
-
 
     <div class='max-w-monitor w-full mx-auto px-4 md:px-14 py-14 xl:py-36 relative'>
         <h2 class='font-sans text-white text-[72px] xl:text-[86px] 2xl:text-[100px] uppercase font-semibold leading-none'>
