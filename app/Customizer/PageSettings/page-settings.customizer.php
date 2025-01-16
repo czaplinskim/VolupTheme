@@ -99,6 +99,19 @@ add_action('customize_register', function ($wp_customize) {
         'description' => 'Podaj link do rejestracji',
     ]));
 
+       $wp_customize->add_setting('page_settings_manual_url', [
+        'default' => '',
+        'type' => 'theme_mod',
+        'sanitize_callback' => ['MyTheme_URL_Control', 'sanitize_link'], // Użycie niestandardowej metody sanitizing
+    ]);
+
+    $wp_customize->add_control(new \MyTheme_URL_Control($wp_customize, 'page_settings_manual_url', [
+        'label' => '',
+        'section' => 'page_settings',
+        'description' => 'Podaj link do instrukcji',
+    ]));
+
+
 
     \Customizer_Separator::add_separator( $wp_customize, 'page_settings', 'page_settings_separator');
 

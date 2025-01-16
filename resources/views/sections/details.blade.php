@@ -23,7 +23,7 @@
                     <h3><span class="text-stroke">KIEDY:</span> {{ $formattedDate }}</h3>
                     <h3><span class="text-stroke">POZIOMY:</span> {{ get_theme_mod('page_settings_details_levels') ?: '' }}</h3>
                 </div>
-                <h3><span class="text-stroke">REJESTRACJA</span> <a href='{{ get_theme_mod('page_settings_register_url') ?: '' }}' target="_blank" rel="noref" class="underline">TUTAJ</a> OD 20 STYCZNIA</h3>
+                <h3><span class="text-stroke">REJESTRACJA</span> OD 20.01 <a href='{{ get_theme_mod('page_settings_manual_url') ?: '' }}' target="_blank" rel="noref" class="underline">INSTRUKCJA</a> </h3>
 
             </div>
             <div class="relative z-10 my-auto mt-10 xl:mt-0 xl:-left-40">

@@ -24,7 +24,7 @@ class My_Customizer_Repeatable
         // Rejestruj ustawienie w Customizerze
         $this->customizer->add_setting($this->setting_id, [
             'default' => json_encode([]),
-            'sanitize_callback' => 'sanitize_text_field',
+            'sanitize_callback' => [$this, 'sanitize_repeatable'], // Użyj własnej funkcji sanitizacji
             'transport' => 'postMessage', // Ustaw transport na postMessage
         ]);
 
@@ -79,23 +79,54 @@ class My_Customizer_Repeatable
 }
 
 
+public function sanitize_repeatable($input)
+{
+    $input_decoded = json_decode($input, true);
+
+    if (!is_array($input_decoded)) {
+        return json_encode([]); // Zwróć pustą tablicę, jeśli dane nie są poprawne
+    }
+
+    foreach ($input_decoded as $key => $item) {
+        // Upewnij się, że każdy element jest tablicą
+        if (!is_array($item)) {
+            unset($input_decoded[$key]);
+            continue;
+        }
+
+        // Sanityzacja każdego pola
+        foreach ($item as $field_key => $field_value) {
+            // Możesz dostosować sanitizację do swoich wymagań
+            $input_decoded[$key][$field_key] = wp_kses_post($field_value);
+        }
+    }
+
+    return json_encode($input_decoded);
+}
+
+
     private function generate_template($index, $values)
 {
     $html = '<div class="my-customizer-repeatable-item">';
+    $index = 0;
     foreach ($this->fields as $key => $field) {
         $value = isset($values[$key]) ? esc_attr($values[$key]) : '';
         $html .= '<label class="customize-control-title">' . esc_html($field['label']) . ':</label>';
         if ($field['type'] === 'text') {
             $html .= '<input type="text" class="customize-control-input" data-field="' . esc_attr($key) . '" value="' . $value . '" />';
         } elseif ($field['type'] === 'textarea') {
-            $html .= '<textarea class="customize-control-textarea" data-field="' . esc_attr($key) . '">' . $value . '</textarea>';
+            $html .= '<textarea class="customize-control-textarea" id="' . esc_attr($key) . '_' . rand() . '" data-field="' . esc_attr($key) . '">' . $value . '</textarea>';
         } elseif ($field['type'] === 'media') {
-            $html .= '<input type="hidden" data-field="' . esc_attr($key) . '" value="' . $value . '" />';
-            $html .= '<button type="button" class="button-secondary my-customizer-media-upload">Wybierz</button>';
+            $html .= '<input type="text" data-field="' . esc_attr($key) . '" value="' . $value . '" />';
+            $html .= '<button type="button" data-fieldid="' . esc_attr($key) . '" class="button-secondary my-customizer-media-upload">Wybierz</button>';
         }
+
+            $index++;
+
     }
     $html .= '<button type="button" class="button-secondary my-customizer-repeatable-remove">Usuń</button>';
     $html .= '</div>';
+    
     return $html;
 }
 

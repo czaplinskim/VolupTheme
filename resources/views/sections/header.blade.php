@@ -9,13 +9,13 @@
 @endphp
 
 
-<header id="parallaxHeader" class="w-full h-screen bg-cover bg-center bg-no-repeat" style="background-image: url('{{ get_header_image() }}');">
+<header id="parallaxHeader" class="w-full {{ is_front_page() ? 'h-screen' : '' }} bg-cover bg-center bg-no-repeat" style="background-image: url('{{ get_header_image() }}');">
   <div id='navbar' class='max-w-monitor w-full mx-auto flex justify-between items-center px-4 md:px-14 py-4 md:py-12 fixed z-50'>
-      <a href='{{ site_url()  }}'>
+      <a href='{{ home_url()  }}'>
               <img class='pt-1 h-12 md:h-14' src='{!! $logo !!}'>
       </a>
       <div class='flex' >
-  
+
 
             <x-burger/>
 
@@ -28,11 +28,16 @@
       </div>
   </div>
 
-  <div class='h-full flex flex-col justify-end px-4 md:px-14 py-20'>
-    <h1 class='font-sans text-white text-[96px] md:text-[140px] font-semibold leading-none'>
-      WARSAW<br/>VOLUP SQUASH CUP
-    </h1>
-  </div>
+  @if(is_front_page())
+    <div class='h-full flex flex-col justify-end px-4 md:px-14 py-20'>
+      <h1 class='font-sans text-white text-[96px] md:text-[140px] font-semibold leading-none'>
+        WARSAW<br/>VOLUP SQUASH CUP
+      </h1>
+    </div>
+  @endif
+
+
+</header>
 
      <div id="slideMenu" data-isopen='false' class="hidden fixed inset-y-0  bg-main text-white flex-col items-center justify-center z-40 w-full overflow-scroll">
       <div class=' pt-28 pb-20 w-full min-h-full grid items-center justify-stretch overflow-scroll'>
@@ -43,6 +48,4 @@
         </div>
 
       </div>
-
-  </div>
-</header>
+    </div>

@@ -84,3 +84,15 @@
 .my-customizer-repeatable-add:hover {
     background: #005a8d;
 }
+
+
+.my-customizer-repeatable-item .quicktags-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.ed_button {
+    flex: 0;
+}
+

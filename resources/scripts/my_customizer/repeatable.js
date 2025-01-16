@@ -1,4 +1,40 @@
 jQuery(document).ready(function ($) {
+  // Otwórz Media Uploader po kliknięciu przycisku
+  $(document).on('click', '.my-customizer-media-upload', function (e) {
+    e.preventDefault();
+
+    const button = $(this);
+    const fieldId = $(this).data('fieldid');
+    const container = button.closest('.my-customizer-repeatable-item');
+    const input = container.find(`[data-field="${fieldId}"]`); // Znajdź ukryte pole input z odpowiednią wartością
+
+    console.log(container);
+    console.log(input);
+
+    // Sprawdź, czy istnieje już media frame
+    let mediaFrame = wp.media({
+      title: 'Wybierz obraz',
+      button: {
+        text: 'Wybierz',
+      },
+      multiple: false, // Wybór pojedynczego obrazu
+    });
+
+    mediaFrame.on('select', function () {
+      const attachment = mediaFrame.state().get('selection').first().toJSON();
+      if (attachment.id) {
+        // Ustaw ID obrazu w ukrytym polu
+        input.val(attachment.id).trigger('change');
+
+        // Zmień tekst przycisku (opcjonalne)
+        button.text('Zmień obraz (ID: ' + attachment.id + ')');
+      }
+    });
+
+    // Otwórz Media Uploader
+    mediaFrame.open();
+  });
+
   // Dodaj nowe pole
   $(document).on('click', '.my-customizer-repeatable-add', function (e) {
     e.preventDefault();
@@ -81,4 +117,16 @@ jQuery(document).ready(function ($) {
       });
     }
   }
+
+  // Inicjalizuj QuickTags dla istniejących textarea
+  $('.my-customizer-repeatable-item textarea').each(function () {
+    console.log($(this).attr('id'));
+    if (!$(this).hasClass('quicktags-initialized')) {
+      $(this).addClass('quicktags-initialized');
+      QTags({
+        id: $(this).attr('id'), // Ustaw unikalny ID dla textarea
+      });
+      QTags._buttonsInit();
+    }
+  });
 });

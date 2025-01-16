@@ -29,3 +29,16 @@
 .menu-menu-glowne-container {
     width: 100%;
 }
+
+.manual ol {
+ list-style: decimal;
+ margin-left: 15px;
+}
+
+.manual ol li {
+    margin-bottom: 10px;
+}
+
+.manual a {
+    text-decoration: underline;
+}
