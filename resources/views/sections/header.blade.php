@@ -4,6 +4,7 @@
   $logo = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' )[0] ?: @asset('images/logo.svg');
 
   $current_lang = isset($_SERVER['HTTP_X_GT_LANG']) ? $_SERVER['HTTP_X_GT_LANG'] : '';
+  $swtich_lang = $current_lang === 'en' ? 'pl' : 'en';
 
 @endphp
 
@@ -20,7 +21,7 @@
 
 
             <div class="lang-buttons font-light text-sm gap-1 flex items-center flex-nowrap mx-5">
-                {!! do_shortcode('[gt-link lang="' . $current_lang === 'en' ? 'en' : 'pl' .'" widget_look="flags"]') !!}
+                {!! do_shortcode('[gt-link lang="' . $swtich_lang .'" widget_look="flags"]') !!}
             </div>
 
            
