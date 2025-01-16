@@ -34,7 +34,7 @@
             <div class="lg:col-span-3 flex flex-col gap-y-10">
                 @foreach ( $schedule as $day )
                     <div>
-                        <h5 class="font-sans text-white uppercase font-semibold text-[64px]">{{ $day['title'] }}<span class="text-[48px] text-stroke"> {{ $day['subtitle'] }}</span></h5>
+                        <h5 class="font-sans text-white uppercase font-semibold text-[48px] md:text-[64px]">{{ $day['title'] }}<span class="text-[48px] text-stroke"> {{ $day['subtitle'] }}</span></h5>
                             <div class="flex flex-col gap-y-6">
                                 @foreach ( $day['items'] as $item )
                                     <div class="flex font-sans text-white uppercase font-semibold gap-x-6">
