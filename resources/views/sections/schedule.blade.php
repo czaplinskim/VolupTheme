@@ -26,7 +26,7 @@
 
 
     <div class='max-w-3xl w-full mx-auto px-4 md:px-14 py-14 xl:py-36'>
-        <h2 class='font-sans text-white text-[72px] xl:text-[86px] 2xl:text-[100px] uppercase font-semibold leading-none'>
+        <h2 class='font-sans text-white text-[64px] md:text-[72px] xl:text-[86px] 2xl:text-[100px] uppercase font-semibold leading-none'>
             HARMONOGRAM
         </h2>
 

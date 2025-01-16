@@ -31,7 +31,7 @@
                 <img class="animate-image" src="{{ get_theme_mod('page_settings_about_media') ?: '' }}">
 
                 @if (isset($year) && isset($month) && isset($day))
-                    <div class="absolute text-stroke text-transparent text-[104px] leading-none font-semibold top-0 lg:top-20 -right-10">
+                    <div class="absolute text-stroke text-transparent text-[82px] lg:text-[104px] leading-none font-semibold top-0 lg:top-20 right-4 xl:-right-10">
                         <p>{{ $day }}/</p>
                         <p>{{ $month }}/</p>
                         <p>{{ $yearArray[0] . $yearArray[1] }}</p>

@@ -1,7 +1,7 @@
 <section id="rules" class="bg-main relative overflow-hidden px-4 md:px-14">    
         <div class="max-w-3xl mx-auto py-14 xl:py-36">
 
-            <div class="relative text-animate text-sans text-[120px] text-white uppercase font-semibold space-y-14 xl:space-y-20 z-10">
+            <div class="relative text-animate text-sans text-[64px] lg:text-[120px] text-white uppercase font-semibold space-y-14 xl:space-y-20 z-10">
                 <div class="space-y-6 md:space-y-0">
                     @for ($i = 1; $i <= 3; $i++)
                         <h3 class="leading-[0.9] md:leading-none">{{ get_theme_mod("rules_item_$i") ?: '' }}</h3>

@@ -17,7 +17,7 @@
 
     <div class="px-4 lg:px-14 lg:pl-40">
         <div class=" relative max-w-3xl mx-auto grid xl:grid-cols-2 py-14 xl:py-36">
-            <div class="z-20 relative text-animate text-sans text-[76px] md:text-[96px] text-white leading-none font-semibold space-y-14 xl:space-y-20">
+            <div class="z-20 relative text-animate text-sans text-[64px] md:text-[96px] text-white leading-none font-semibold space-y-14 xl:space-y-20">
                 <div>
                     <h3><span class="text-stroke">GDZIE:</span> WARSZAWA</h3>
                     <h3><span class="text-stroke">KIEDY:</span> {{ $formattedDate }}</h3>

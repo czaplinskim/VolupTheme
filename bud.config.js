@@ -37,8 +37,8 @@ export default async (app) => {
    * @see {@link https://bud.js.org/reference/bud.watch}
    */
   app
-    .setUrl('http://volupsquashcup.com:3000')
-    .setProxyUrl('http://volupsquashcup.com')
+    .setUrl('https://volupsquashcup.com:3000')
+    .setProxyUrl('https://volupsquashcup.com')
     .watch(['resources/views', 'app']);
 
     app.provide({
