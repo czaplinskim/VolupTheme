@@ -1,0 +1,86 @@
+.my-customizer-repeatable-container {
+    margin-bottom: 20px;
+}
+
+.my-customizer-repeatable-items {
+    margin-bottom: 15px;
+}
+
+.my-customizer-repeatable-item {
+    margin-bottom: 10px;
+    padding: 15px;
+    background: #ffffff;
+    border: 1px solid #ccd0d4;
+    position: relative;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.my-customizer-repeatable-item label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #555d66;
+}
+
+.my-customizer-repeatable-item input,
+.my-customizer-repeatable-item textarea {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+    background: #f7f7f7;
+    font-size: 13px;
+    color: #32373c;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.my-customizer-repeatable-item input:focus,
+.my-customizer-repeatable-item textarea:focus {
+    outline: none;
+    border-color: #007cba;
+    box-shadow: 0 0 0 1px #007cba;
+}
+
+.my-customizer-repeatable-remove {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #e94e3f;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 1;
+    transition: background 0.2s ease;
+}
+
+.my-customizer-repeatable-remove:hover {
+    background: #d73b2b;
+}
+
+.my-customizer-repeatable-add {
+    display: inline-block;
+    background: #007cba;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 13px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    transition: background 0.2s ease;
+}
+
+.my-customizer-repeatable-add:hover {
+    background: #005a8d;
+}

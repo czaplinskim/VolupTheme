@@ -1,0 +1,31 @@
+.quicktags-customizer-editor {
+    width: 100%;
+    min-height: 200px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: #fff;
+    color: #333;
+}
+
+.quicktags-toolbar {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.quicktags-toolbar input {
+    padding: 5px;
+    margin-right: 5px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+    color: #333;
+}
+
+.quicktags-toolbar input:hover {
+    background-color: #e7e7e7;
+}

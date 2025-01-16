@@ -1,0 +1,60 @@
+@import 'my_customizer/quicktags-customizer.css';
+@import 'my_customizer/image-control.css';
+@import 'my_customizer/repeatable-image-control.css';
+@import 'my_customizer/instagram-reels.css';
+@import 'my_customizer/repeatable-header-with-description.css';
+@import 'my_customizer/repeatable.css';
+
+
+.attachment-media-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.thumbnail-image {
+    margin-bottom: 10px;
+    width: 100%;
+    max-height: 150px;
+}
+
+.attachment-thumb {
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.actions {
+    width: 100%;
+    display: flex;
+}
+
+.actions .button {
+    margin: 0 0px;
+}
+
+.actions .handle {
+    cursor: move;
+    margin-top: 12px;
+    font-size: 18px;
+    margin-left: auto;
+}
+
+.dragicon-svg {
+    height: 30px;
+}
+
+.add-repeatable-button {
+    margin-top: 15px;
+}
+
+.meta-box-sortables .repeatable-item {
+    cursor: default !important; /* Ustaw kursor na normalny */
+}
+
+.my-customizer-checkbox span,
+.customize-inside-control-row {
+    display: flex !important;
+    align-items: center !important;
+}

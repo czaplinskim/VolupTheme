@@ -1,0 +1,77 @@
+.my-customizer-instagram-reels-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.my-customizer-instagram-reels-container {
+    flex-basis: 100%;
+}
+
+.my-customizer-instagram-reels-preview {
+    position: relative;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 9 / 16;
+    background-color: #f7f7f7;
+    border: 1px dashed #ccd0d4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Ustawienie podglądu */
+.my-customizer-instagram-reels-preview:hover
+    .my-customizer-instagram-reels-replace,
+.my-customizer-instagram-reels-preview:hover
+    .my-customizer-instagram-reels-remove {
+    display: block;
+}
+
+.my-customizer-instagram-reels-preview[data-reel-id] {
+    background-size: cover;
+    background-position: center;
+}
+
+.my-customizer-instagram-reels-replace,
+.my-customizer-instagram-reels-remove {
+    display: none;
+    position: absolute;
+    background-color: #007cba;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.my-customizer-instagram-reels-replace {
+    top: 10px;
+    left: 10px;
+}
+
+.my-customizer-instagram-reels-remove {
+    top: 10px;
+    right: 10px;
+}
+
+.my-customizer-instagram-reels-actions {
+    width: 100%;
+    display: flex;
+}
+
+.my-customizer-instagram-reels-actions .button {
+    margin: 0;
+}
+
+.my-customizer-instagram-reels-select {
+    background-color: #007cba;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.my-customizer-instagram-reels-select:hover {
+    background-color: #005a8c;
+}

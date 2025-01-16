@@ -1,0 +1,42 @@
+.my-customizer-repeatable-header-with-description-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.my-customizer-repeatable-header-with-description-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.my-customizer-repeatable-header-with-description-header,
+.my-customizer-repeatable-header-with-description-description {
+    width: 100% !important;
+    margin-bottom: 5px !important;
+    box-shadow: 0 0 0 transparent !important;
+    border-radius: 4px !important;
+    border: 1px solid #8c8f94 !important;
+    background-color: #fff !important;
+    color: #2c3338 !important;
+    padding: 0 8px !important;
+    line-height: 2 !important;
+    min-height: 30px !important;
+    box-sizing: border-box !important;
+    font-size: 14px !important;
+    font-family: inherit !important;
+}
+
+.add-new-repeatable-header-description {
+    margin-top: 15px;
+}
+
+.remove-repeatable-header-description {
+    margin-top: 10px;
+    background-color: #f00;
+    color: white;
+}

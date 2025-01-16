@@ -1,0 +1,112 @@
+.my-customizer-repeatable-image-outer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+.my-customizer-repeatable-image-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7f7f7;
+    border: 1px dashed #ccd0d4;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.my-customizer-repeatable-image-container:has(
+        .my-customizer-repeatable-image-has-image
+    ) {
+    cursor: move;
+}
+
+.my-customizer-repeatable-image-preview {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.my-customizer-repeatable-image-thumbnail {
+    margin-bottom: 10px;
+    width: 100%;
+    max-height: 150px;
+}
+
+.my-customizer-repeatable-image-thumb {
+    object-fit: cover;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+}
+
+.my-customizer-repeatable-image-actions {
+    width: 100%;
+    display: flex;
+}
+
+.my-customizer-repeatable-image-actions .button {
+    margin: 0;
+}
+
+.my-customizer-repeatable-image-dragicon-svg {
+    height: 30px;
+}
+
+.my-customizer-repeatable-image-add-button {
+    margin-top: 15px;
+}
+
+.my-customizer-repeatable-image-dragicon {
+    cursor: move;
+    margin-top: 12px;
+    font-size: 18px;
+    margin-left: auto;
+}
+
+.my-customizer-repeatable-image-container:hover
+    .my-customizer-repeatable-image-replace,
+.my-customizer-repeatable-image-container:hover
+    .my-customizer-repeatable-image-remove {
+    display: block;
+}
+
+.my-customizer-repeatable-image-replace,
+.my-customizer-repeatable-image-remove {
+    display: none;
+    position: absolute;
+    background-color: #007cba;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.my-customizer-repeatable-image-replace {
+    top: 10px;
+    left: 10px;
+}
+
+.my-customizer-repeatable-image-remove {
+    top: 10px;
+    right: 10px;
+}
+
+.my-customizer-repeatable-image-select {
+    background-color: #007cba;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+.my-customizer-repeatable-image-select:hover {
+    background-color: #005a8c;
+}

@@ -1,0 +1,31 @@
+@import 'reset';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+#backgroundCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.border-t {
+    border-top: 2px solid white;
+    transform: scaleX(0);
+    transform-origin: left center;
+}
+
+.border-r {
+    border-right: 2px solid white;
+    transform: scaleY(0);
+    transform-origin: top center;
+}
+
+.menu-menu-glowne-container {
+    width: 100%;
+}
