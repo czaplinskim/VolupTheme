@@ -1,3 +1,5 @@
+import aspectRatio from '@tailwindcss/aspect-ratio';
+
 /** @type {import('tailwindcss').Config} config */
 const config = {
   content: ['./app/**/*.php', './resources/**/*.{php,vue,js}'],
@@ -23,7 +25,7 @@ const config = {
         pink: '#EE7C72',
       }, // Extend Tailwind's default colors
       maxWidth: {
-        'xl': '1020px',
+        xl: '1020px',
         '2xl': '1210px',
         '3xl': '1440px',
         monitor: '1920px',
@@ -31,7 +33,7 @@ const config = {
     },
   },
   plugins: [
-    require('@tailwindcss/aspect-ratio'),
+    aspectRatio,
     function ({ addUtilities }) {
       addUtilities({
         '.text-stroke': {
