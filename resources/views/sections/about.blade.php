@@ -22,7 +22,7 @@
     </div>
 
     <div class='max-w-monitor w-full mx-auto px-4 md:px-14 py-14 xl:py-36 relative'>
-        <h2 class='font-sans text-white text-[72px] xl:text-[86px] 2xl:text-[100px] uppercase font-semibold leading-none'>
+        <h2 class='font-sans text-white text-[68px] md:text-[72px] xl:text-[86px] 2xl:text-[100px] uppercase font-semibold leading-none'>
             {{ get_theme_mod('page_settings_about_header') ?: 'Pierwsze Mistrzostwa w Squasha w Warszawie dla społeczności LGBT+!' }}
         </h2>
 
@@ -31,7 +31,7 @@
                 <img class="animate-image" src="{{ get_theme_mod('page_settings_about_media') ?: '' }}">
 
                 @if (isset($year) && isset($month) && isset($day))
-                    <div class="absolute text-stroke text-transparent text-[82px] lg:text-[104px] leading-none font-semibold top-0 lg:top-20 right-4 xl:-right-10">
+                    <div class="absolute text-stroke text-transparent text-[72px] md:text-[82px] lg:text-[104px] leading-none font-semibold -top-10 lg:top-20 right-4 xl:-right-10">
                         <p>{{ $day }}/</p>
                         <p>{{ $month }}/</p>
                         <p>{{ $yearArray[0] . $yearArray[1] }}</p>
