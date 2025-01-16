@@ -3,8 +3,7 @@
   $bg_image = get_header_image() ?: @asset('images/bg.jpeg');
   $logo = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' )[0] ?: @asset('images/logo.svg');
 
-  $lang = getCookie('googtrans');
-
+  $current_lang = isset($_SERVER['HTTP_X_GT_LANG']) ? $_SERVER['HTTP_X_GT_LANG'] : '';
 
 @endphp
 
@@ -21,7 +20,7 @@
 
 
             <div class="lang-buttons font-light text-sm gap-1 flex items-center flex-nowrap mx-5">
-                {!! do_shortcode('[gt-link lang="en" widget_look="flags"]') !!}
+                {!! do_shortcode('[gt-link lang="' . $current_lang === 'en' ? 'en' : 'pl' .'" widget_look="flags"]') !!}
             </div>
 
            
