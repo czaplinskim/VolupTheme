@@ -20,7 +20,7 @@
             <x-burger/>
 
 
-            <div class="lang-buttons font-light text-sm gap-1 flex items-center flex-nowrap mx-5">
+            <div class="lang-buttons font-light text-sm gap-1 flex items-center flex-nowrap ml-5">
                 {!! do_shortcode('[gt-link lang="' . $swtich_lang .'" widget_look="flags"]') !!}
             </div>
 
