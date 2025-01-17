@@ -24,7 +24,7 @@
             <div class="manual grid xl:grid-cols-4 relative z-10">
                 <div class="my-auto xl:col-span-2 {{ $imgorder }}">
                     <div class="aspect-w-16 aspect-h-9">
-                       @if(isset($current_lang) && $current_lang === 'en') 
+                       @if(isset($current_lang) && $current_lang === 'en' && isset($item['media_eng'])) 
                             {!! wp_get_attachment_image($item['media_eng'], 'full', false, ['class' => 'h-full w-full object-cover']) !!}
 
                         @else   
