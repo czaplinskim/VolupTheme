@@ -23,6 +23,8 @@ add_action('customize_register', function ($wp_customize) {
             'question' => ['type' => 'text', 'label' => 'Nagłówek'],
             'answer' => ['type' => 'textarea', 'label' => 'Treść'],
             'media' => ['type' => 'media', 'label' => 'Obrazek'],
+            'media_eng' => ['type' => 'media', 'label' => 'Obrazek ENG'],
+
 
         ]
     );

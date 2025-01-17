@@ -1,6 +1,8 @@
 @php
 
     $manual = json_decode(get_theme_mod('manual_items', '[]'), true);
+    $current_lang = isset($_SERVER['HTTP_X_GT_LANG']) ? $_SERVER['HTTP_X_GT_LANG'] : '';
+
 
 @endphp
 
@@ -22,7 +24,13 @@
             <div class="manual grid xl:grid-cols-4 relative z-10">
                 <div class="my-auto xl:col-span-2 {{ $imgorder }}">
                     <div class="aspect-w-16 aspect-h-9">
-                    {!! wp_get_attachment_image($item['media'], 'full', false, ['class' => 'h-full w-full object-cover']) !!}
+                       @if(isset($current_lang) && $current_lang === 'en') 
+                            {!! wp_get_attachment_image($item['media_eng'], 'full', false, ['class' => 'h-full w-full object-cover']) !!}
+
+                        @else   
+                            {!! wp_get_attachment_image($item['media'], 'full', false, ['class' => 'h-full w-full object-cover']) !!}
+
+                       @endif
                     </div>
                 </div>
 
