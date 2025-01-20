@@ -11,7 +11,7 @@
 
         <div class=" lg:col-span-2 px-4  py-14 lg:py-36 order-1 lg:order-2">
         
-            <div class="animate-text font-sans text-white uppercase font-semibold">
+            <div class="font-sans text-white uppercase font-semibold">
                 <h5 class=" text-[64px] md:text-[96px] leading-none"> MASZ PYTANIA?</h5>
                  <p class="my-10 font-sans font-medium text-[26px] pl-1 text-white leading-snug max-w-[560px]">
                     {!! get_theme_mod('contact_text') ?: '' !!}

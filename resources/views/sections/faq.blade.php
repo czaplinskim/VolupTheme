@@ -14,7 +14,7 @@ $faq_items = json_decode(get_theme_mod('items', '[]'), true) ?: null;
                 @if(isset($faq_items))
                 @foreach ($faq_items as $index => $item)
                     <div class="faq-accordion-item px-2 md:px-3.5 lg:px-8 cursor-pointer">
-                        <div class="flex justify-between items-baseline py-6 faq-accordion-header gap-x-1" id="accordion-title-{{ $index }}">
+                        <div class="flex justify-between items-baseline py-6 faq-accordion-header gap-x-2" id="accordion-title-{{ $index }}">
                                 <h6 class="uppercase text-white font-medium font-sans text-[26px]">{{ $item['question'] }}</h6>
                                 <span><x-i-arrow height="15" fill="white"></x-i-arrow></span>
                         </div>

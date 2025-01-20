@@ -39,7 +39,7 @@
                         <h5 class=" text-[64px] leading-none"> {{ $item['question']}} </h5>
                       
 
-                        <div class="my-10 pl-1 font-sans font-light text-xl text-white leading-snug max-w-[560px]">{!! $item['answer'] !!}</div>
+                        <div class="my-10 pl-1 font-sans font-light text-xl text-white normal-case leading-snug max-w-[560px]">{!! $item['answer'] !!}</div>
                     </div>
                 </div>
             </div>
