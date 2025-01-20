@@ -12,7 +12,7 @@
 <header id="parallaxHeader" class="w-full {{ is_front_page() ? 'h-screen' : '' }} bg-cover bg-center bg-no-repeat" style="background-image: url('{{ get_header_image() }}');">
   <div id='navbar' class='max-w-monitor w-full mx-auto flex justify-between items-center px-4 md:px-14 py-4 md:py-12 fixed z-50'>
       <a href='{{ home_url()  }}'>
-              <img class='pt-1 h-12 md:h-14' src='{!! $logo !!}'>
+              <img class='pt-1 h-12 md:h-[60px]' src='{!! $logo !!}'>
       </a>
       <div class='flex' >
 
