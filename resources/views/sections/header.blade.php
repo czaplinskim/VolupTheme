@@ -31,7 +31,7 @@
   @if(is_front_page())
     <div class='h-full flex flex-col justify-end px-4 md:px-14 py-20'>
       <h1 class='font-sans text-white text-[96px] md:text-[140px] xl:text-[164px] font-semibold leading-none'>
-        <span class='block max-w-fit relative'>WARSAW <img class='absolute -right-5 h-14 top-1/2  -translate-y-1/2' src="@asset('images/heart_lgbt.svg')"/></span>VOLUP SQUASH CUP
+        <span class='block max-w-fit relative'>WARSAW <img class='absolute -right-4 md:-right-6 h-12 md:h-14 top-[55%]  -translate-y-1/2' src="@asset('images/heart_lgbt.svg')"/></span>VOLUP SQUASH CUP
       </h1>
     </div>
   @endif
